@@ -1,0 +1,166 @@
+/* Global reset or base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Example font */
+  height: 100%; /* Ensure the html and body occupy full viewport height */
+}
+
+/* Layout styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.nav {
+  display: flex;
+  height: 20vh; /* This will make the navbar take up 20% of the viewport height */
+  width: 100%; /* Ensure navbar takes full width */
+  align-items: center; /* Align navbar items vertically in the center */
+  justify-content: space-around; /* Align navbar items to the start of the container */
+  padding-left: 10px; /* Adjust as needed to space items from the start */
+  background-color: #183059;
+}
+
+.nav-item {
+  display: inline-flex; /* Aligns content and makes padding effective */
+  align-items: center; /* Vertically centers text */
+  justify-content: center; /* Horizontally centers text */
+  color: #F6F4F3;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3vh;
+  padding: 10px 20px; /* Adjust as needed, gives a rectangular shape */
+  margin: 0 10px; /* Optional: adds space between items */
+  background-color: #183059; /* Darker base color */
+  transition: background-color 0.3s; /* Smooth transition for the hover effect */
+  border-radius: 5px; /* Optional: adds rounded corners to the boxes */
+}
+
+.nav-item:hover {
+  background-color: #2A497F; /* Slightly lighter color on hover */
+}
+
+
+.main-content {
+  flex-grow: 1; /* Will take up the rest of the space */
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  padding: 20px;
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  width: 100%; /* Ensure main content takes full width */
+  overflow: auto; /* Adds scroll to the content area if content overflows */
+  background-image: url('assets/background.jpg'); /* Set your background image */
+  background-size: cover; /* Ensure the background covers the full area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background */
+}
+
+.card {
+  background-color: #AF5B5B; /* Light background for the card */
+  color: #F6F4F3;
+  padding: 20px; /* Spacing inside the card */
+  border-radius: 8px; /* Optionally rounded corners for the card */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  width: 60vw; /* Takes up 60% of the viewport width */
+  height: 50vh; /* Takes up 60% of the viewport height */
+  max-width: 600px; /* Maximum width of the card, adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically inside the card */
+  text-align: center; /* Center the text inside the card */
+  font-family: "Open Sans", sans-serif;
+  font-size: 2vh;
+  overflow: hidden;
+}
+
+.card h1 {
+  margin-top: 0; /* Removes top margin to move it closer to the top of the card */
+  padding-top: 20px; /* Adds padding at the top for some spacing from the card's edge */
+  /* Other styling for h1 */
+}
+
+.card p {
+  padding: 20px; /* Adds padding around the paragraph for spacing within the card */
+  margin: 20px 0; /* Adds margin above and below the paragraph for more spacing */
+  line-height: 1.6; /* Adjusts line height for better readability */
+  /* Other styling for p */
+}
+
+/* Styles for the container elements, might be your form or a div wrapping your input and label */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the elements horizontally */
+  padding: 20px;
+  gap: 10px; /* Provides space between the elements */
+}
+
+label {
+  font-size: 18px; /* Larger text for the label */
+  color: white;
+
+}
+
+input[type="text"]#queryInput {
+  width: 80%; /* Responsive width */
+  padding: 10px; /* Padding for inside the input field */
+  margin: 5px 0; /* Margin for spacing around the input field */
+  font-size: 16px; /* Comfortable text size */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: inset 0 1px 3px #ddd; /* Subtle inner shadow for depth */
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px; /* Matches the input text size */
+  color: white;
+  background-color: #007BFF; /* Bright blue, for visibility */
+  border: none;
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Changes cursor to indicate button is clickable */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Styles for the ResultsDisplay component card */
+.results-card {
+  background-color: #fff; /* White background */
+  color: #276FBF;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the card */
+  margin: 20px 0; /* Margin around the card for spacing */
+  overflow: auto; /* Ensures content fits within the rounded corners */
+}
+
+/* Styles for the table within the ResultsDisplay component */
+.results-card table {
+  width: 100%; /* Full width to stretch across the card */
+  border-collapse: collapse; /* Removes space between table borders */
+  margin-top: 20px; /* Spacing above the table */
+}
+
+.results-card th, .results-card td {
+  text-align: left; /* Aligns text to the left */
+  padding: 12px; /* Padding for table cells */
+  border-bottom: 1px solid #ddd; /* Light border for rows */
+}
+
+.results-card th {
+  background-color: #f9f9f9; /* Light background for header row */
+  font-weight: bold; /* Makes header text bold */
+}
+
+/* Enhances the hover effect on table rows */
+.results-card tr:hover {
+  background-color: #f2f2f2; /* Light shade for hover */
+}
+
