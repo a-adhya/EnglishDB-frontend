@@ -83,6 +83,7 @@ function App() {
         <div className='results-card'>
         <ResultsDisplay data={queryResult} query={sqlQuery} />
         </div>
+        
         <div className="results-card">
           <QueryDisplay query={sqlQuery} />
         </div>
